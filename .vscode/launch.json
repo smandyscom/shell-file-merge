@@ -6,7 +6,7 @@
             "type": "bashdb",
             "request": "launch",
             "scriptPath": "${workspaceRoot}/merger.sh",
-            "commandLineArguments": "./ ../",
+            "commandLineArguments": "${workspaceRoot}/dir1 ${workspaceRoot}/dir2",
             "windows": {
                 "bashPath": "C:\\Windows\\sysnative\\bash.exe"
             },
