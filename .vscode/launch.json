@@ -14,7 +14,7 @@
                 "bashPath": "bash"
             },
             "osx": {
-                "bashPath": "zsh"
+                "bashPath": "bash"
             }
         }
     ]

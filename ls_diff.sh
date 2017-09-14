@@ -1,9 +1,9 @@
-#!/bin/zsh
+#!/bin/bash
 
-echo $1; #input argument
-echo $2;
+#echo $1; #input argument
+#echo $2;
 
-retval=-1 # as return value
+#retval=-1 # as return value
 function get_file_list(){
     unset retval
     retval=-1
@@ -31,6 +31,7 @@ list1=("${retval[@]}")
 get_file_list $2
 list2=("${retval[@]}") #copy of original array
 
+
 #check which one is fewer
 if [ ${#list1[@]} -lt ${#list2[@]} ];then
 fewer=("${list1[@]}")
@@ -46,10 +47,8 @@ for i in ${fewer[@]}
         containsElement $i ${other[@]}
         if [ $? -eq 0 ]
         then
-        echo $i
         redundant+=($i) #append element
         fi
     done
 
-echo ${retval[@]} #echo whole array
-echo ${redundant[@]}
+echo ${redundant[@]} #echo whole array
